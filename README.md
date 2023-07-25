@@ -3,6 +3,9 @@
 A playground for testing out things in React, Bootstrap/Reactstrap, Typescript
 <br>
 <br>
+Photos by [NEOM]("https://unsplash.com/@neom?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") on [Unsplash]("https://unsplash.com/photos/4K_x--J2Jbc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText")
+<br>
+<br>
 
 ## Frameworks, packages, tools & resources used so far
 

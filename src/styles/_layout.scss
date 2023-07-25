@@ -29,7 +29,6 @@ main {
     z-index: 1;
   }
 }
-
-// h1 {
-//   color: $primary;
-// }
+#header-image {
+  transform: scaleX(-1);
+}
