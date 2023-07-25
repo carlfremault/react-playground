@@ -1,0 +1,35 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: $base-line-height;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: $primary;
+  background-color: $background;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  background-color: $background;
+  color: $primary;
+}
+.navbar {
+  background-color: aquamarine;
+}
+
+#header-text {
+  @include media-breakpoint-up(lg) {
+    margin-top: 10%;
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+// h1 {
+//   color: $primary;
+// }
