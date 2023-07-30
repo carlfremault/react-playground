@@ -1,8 +1,11 @@
 #header-text {
   @include media-breakpoint-up(lg) {
-    margin-top: 10%;
     position: absolute;
     z-index: 1;
+    margin-top: 15%;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-top: 20%;
   }
 }
 #header-image {
@@ -56,6 +59,9 @@ img {
 }
 
 .text-container {
+  position: sticky;
+  bottom: 10px;
+
   @include media-breakpoint-up(lg) {
     max-width: 65%;
   }
