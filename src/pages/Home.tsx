@@ -136,7 +136,7 @@ const Home = () => {
         </section>
       </Container>
       {/* Foruth section: text - image (wide) */}
-      <Container fluid className="p-0">
+      {/* <Container fluid className="p-0">
         <section className="wide-section">
           <Row>
             <Col lg={{ size: 6, order: 2 }} className="vertical-image p-0">
@@ -154,7 +154,17 @@ const Home = () => {
             </Col>
           </Row>
         </section>
-      </Container>
+      </Container> */}
+      <div className="parallax">
+        <div className="parallax__group">
+          <div className="parallax__layer parallax__layer--back">
+            <div className="title">back z-1 k</div>
+          </div>
+          <div className="">
+            <div className="title">front z0</div>
+          </div>
+        </div>
+      </div>
       {/* Fifth section: title - text */}
       <Container fluid="lg" className="p-0">
         <section className="section-container">
