@@ -1,0 +1,29 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: $base-line-height;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: $primary;
+  background-color: $background;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.navbar {
+  background-color: $secondary;
+}
+
+main {
+  background-color: $background;
+  color: $primary;
+}
+
+.row {
+  padding: 0; // Bootstrap override
+  margin: 0; // Bootstrap override
+}
