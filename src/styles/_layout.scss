@@ -22,3 +22,8 @@ main {
   background-color: $background;
   color: $primary;
 }
+
+.row {
+  padding: 0; // Bootstrap override
+  margin: 0; // Bootstrap override
+}
