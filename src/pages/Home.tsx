@@ -1,4 +1,16 @@
 import { Container, Col, Row, Button } from 'reactstrap';
+import {
+  lorem_5,
+  lorem_10,
+  lorem_15,
+  lorem_20,
+  lorem_25,
+  lorem_30,
+  lorem_35,
+  lorem_40,
+  lorem_45,
+  lorem_50,
+} from '../utils/lorem';
 
 const Home = () => {
   return (
@@ -59,7 +71,7 @@ const Home = () => {
           </Row>
         </Container>
       </section>
-      {/* First section: image - text */}
+      {/* First section: image - text (wide) */}
       <section id="first-section" className="mb-5">
         <div className="mb-5">
           <Row style={{ margin: '0', padding: '0' }}>
@@ -72,20 +84,8 @@ const Home = () => {
             >
               <div className="text-container p-0 p-sm-5 p-lg-0">
                 <h2 className="mb-4">First Section Here</h2>
-                <p className="">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Vitae est iure deserunt natus temporibus molestiae in ea,
-                  quis, eum corporis incidunt reiciendis sed recusandae
-                  distinctio repellat debitis minus eligendi iusto adipisci.
-                  Iste odit reiciendis facere, doloremque vel expedita,
-                  perspiciatis sapiente et dolorem repellat pariatur
-                  exercitationem suscipit nulla! Ipsa, illum iure?
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-                  commodi fugiat optio nesciunt laborum, illum corrupti debitis
-                  reprehenderit aperiam id?
-                </p>
+                <p className="">{lorem_50}</p>
+                <p>{lorem_20}</p>
               </div>
             </Col>
           </Row>
@@ -93,7 +93,7 @@ const Home = () => {
       </section>
       {/* Second section: title - text */}
       <section className="mb-5">
-        <div className="content-container">
+        <Container fluid="xl" className="content-container">
           <Row style={{ margin: '0', padding: '0' }}>
             <Col lg="6">
               <h2 className="px-sm-5 mb-4 ms-lg-5">
@@ -102,35 +102,18 @@ const Home = () => {
             </Col>
             <Col lg="6">
               <div className="text-container p-0 px-sm-5 p-lg-0">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Doloremque, necessitatibus est porro quas perferendis facere?
-                </p>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Quam, ut!
-                </p>
+                <p>{lorem_15}</p>
+                <p>{lorem_10}</p>
                 <ul>
-                  <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quae, possimus magni?
-                  </li>
-                  <li>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  </li>
-                  <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nihil consequuntur aperiam optio molestiae ex.
-                  </li>
+                  <li>{lorem_20}</li>
+                  <li>{lorem_5}</li>
+                  <li>{lorem_10}</li>
                 </ul>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Harum tempore pariatur eius.
-                </p>
+                <p>{lorem_15}</p>
               </div>
             </Col>
           </Row>
-        </div>
+        </Container>
       </section>
       <section>
         <Container fluid="lg" className="pt-4 pt-lg-0 mb-5">
@@ -143,15 +126,7 @@ const Home = () => {
               />
             </Col>
             <Col lg="4" className="p-3">
-              <p className="p-3">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae
-                est iure deserunt natus temporibus molestiae in ea, quis, eum
-                corporis incidunt reiciendis sed recusandae distinctio repellat
-                debitis minus eligendi iusto adipisci. Iste odit reiciendis
-                facere, doloremque vel expedita, perspiciatis sapiente et
-                dolorem repellat pariatur exercitationem suscipit nulla! Ipsa,
-                illum iure?
-              </p>
+              <p className="p-3">{lorem_35}</p>
             </Col>
           </Row>
         </Container>
