@@ -11,10 +11,13 @@ import {
   lorem_45,
   lorem_50,
 } from '../utils/lorem';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const Home = () => {
   return (
-    <>
+    <main className="parallax">
+      <Navigation />
       {/* Header */}
       <Container fluid="lg" className="pt-4 pt-lg-0 mb-5">
         <Row>
@@ -33,7 +36,7 @@ const Home = () => {
           <Col lg={{ offset: 3, size: 9 }} className="p-0">
             <img
               id="header-image"
-              className="img-fluid"
+              className="img-fluid image"
               src="/images/neom-I5j46lqAo-o-unsplash1920x1281.jpg"
             />
           </Col>
@@ -73,10 +76,13 @@ const Home = () => {
       </section>
       {/* First section: image - text (wide) */}
       <Container fluid className="p-0">
-        <section className="wide-section">
+        <section className="bg-accent">
           <Row>
             <Col lg="6" className="p-0">
-              <img src="/images/neom-4K_x--J2Jbc-unsplash.jpg" />
+              <img
+                src="/images/neom-4K_x--J2Jbc-unsplash.jpg"
+                className="image"
+              />
             </Col>
             <Col
               lg="6"
@@ -115,11 +121,15 @@ const Home = () => {
       <Container fluid className="p-0">
         <img
           src="/images/neom-9E9NsEiUGxg-unsplash 1920x1280.jpg"
-          className="wide-image"
+          className="wide-image image"
         />
       </Container>
       {/* Third section: title - text */}
-      <Container fluid="lg" className="p-0">
+      <Container
+        fluid="lg"
+        className="p-0"
+        style={{ zIndex: 1, position: 'relative' }}
+      >
         <section className="section-container">
           <Row className="p-3 p-sm-5">
             <Col lg="6" className="p-0">
@@ -136,15 +146,18 @@ const Home = () => {
         </section>
       </Container>
       {/* Foruth section: text - image (wide) */}
-      {/* <Container fluid className="p-0">
-        <section className="wide-section">
-          <Row>
-            <Col lg={{ size: 6, order: 2 }} className="vertical-image p-0">
+      <Container fluid className="p-0 preserve3d parallax__group">
+        <section className="preserve3d">
+          <Row className="preserve3d parallax-section">
+            <Col
+              lg={{ size: 6, order: 2 }}
+              className="vertical-image p-0 parallax__layer parallax__layer--back"
+            >
               <img src="/images/neom-dulVtESluoM-unsplash 1920x2879.jpg" />
             </Col>
             <Col
               lg={{ size: 6, order: 1 }}
-              className="d-flex flex-column justify-content-center align-items-center p-3 p-sm-5 px-lg-0"
+              className="d-flex flex-column justify-content-center align-items-center p-3 p-sm-5 px-lg-0 bg-accent high-container"
             >
               <div className="text-container">
                 <h2 className="mb-4">One more section ...</h2>
@@ -154,17 +167,7 @@ const Home = () => {
             </Col>
           </Row>
         </section>
-      </Container> */}
-      <div className="parallax">
-        <div className="parallax__group">
-          <div className="parallax__layer parallax__layer--back">
-            <div className="title">back z-1 k</div>
-          </div>
-          <div className="">
-            <div className="title">front z0</div>
-          </div>
-        </div>
-      </div>
+      </Container>
       {/* Fifth section: title - text */}
       <Container fluid="lg" className="p-0">
         <section className="section-container">
@@ -178,8 +181,9 @@ const Home = () => {
             </Col>
           </Row>
         </section>
-      </Container>
-    </>
+      </Container>{' '}
+      <Footer />
+    </main>
   );
 };
 
