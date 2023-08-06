@@ -15,7 +15,7 @@ function Navigation() {
   const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (
-    <div>
+    <div className="width-1920 mx-auto">
       <Navbar color="faded" light>
         <NavbarBrand href="/" className="me-auto">
           reactstrap
