@@ -128,7 +128,7 @@ header {
 
   .parallax__group {
     position: relative;
-    height: 700px;
+    height: 650px;
     transform-style: preserve-3d;
     // border: 3px solid green;
   }
@@ -139,19 +139,35 @@ header {
 
   .parallax__layer--section-1 {
     position: relative;
-    top: 600px;
+    top: 420px;
     right: 0px;
     bottom: 0;
-    left: -50px;
-    transform: translateZ(-5px) scale(3.5);
+    left: 0px;
+    transform: translateZ(-5px) scale(3.6);
+
+    @include media-breakpoint-up(xl) {
+      top: 280px;
+      transform: translateZ(-5px) scale(3.2);
+    }
 
     @include media-breakpoint-up(xxl) {
-      top: 400px;
-      transform: translateZ(-5px) scale(3);
+      top: 150px;
+      transform: translateZ(-5px) scale(2.8);
+    }
+
+    @media (min-width: 1600px) {
+      top: 100px;
+      transform: translateZ(-5px) scale(2.6);
+    }
+
+    @media (min-width: 1800px) {
+      top: 0px;
+      transform: translateZ(-5px) scale(2.4);
     }
 
     @media (min-width: 1920px) {
-      top: 15z0px;
+      top: -150px;
+      transform: translateZ(-5px) scale(2);
     }
   }
 
