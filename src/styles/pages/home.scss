@@ -130,7 +130,9 @@ header {
     position: relative;
     height: 650px;
     transform-style: preserve-3d;
-    // border: 3px solid green;
+    &.wide {
+      height: 450px;
+    }
   }
 
   .parallax__layer {
@@ -144,6 +146,7 @@ header {
     bottom: 0;
     left: 0px;
     transform: translateZ(-5px) scale(3.6);
+    z-index: -10;
 
     @include media-breakpoint-up(xl) {
       top: 280px;
@@ -173,19 +176,20 @@ header {
 
   .parallax__layer--section-2 {
     position: relative;
-    top: 0;
+    top: -230px;
     right: 0px;
-    bottom: 0;
-    left: -0;
-    transform: translateZ(-5px) scale(1.5);
+    bottom: 0px;
+    left: 0px;
+    transform: translateZ(-5px) scale(2);
+    z-index: -8;
 
     @include media-breakpoint-up(xxl) {
-      top: 400px;
-      transform: translateZ(-5px) scale(3);
+      top: -200px;
     }
 
-    @media (min-width: 1920px) {
-      top: 15z0px;
+    @media (min-width: 1800px) {
+      // top: -150px;
+      transform: translateZ(-5px) scale(2);
     }
   }
 }

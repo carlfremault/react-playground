@@ -119,7 +119,7 @@ const Home = () => {
       </Container>
       {/* Wide image parallax*/}
       <Container fluid className="width-1920 preserve3d p-0">
-        <section className="parallax__group">
+        <section className="parallax__group wide">
           <div className="parallax__layer parallax__layer--section-2">
             <img
               src="/images/neom-9E9NsEiUGxg-unsplash 1920x1280.jpg"
