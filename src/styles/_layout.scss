@@ -15,15 +15,10 @@
 }
 
 .navbar {
-  background-color: $secondary;
+  background-color: $accent;
+  max-width: 1920px;
 }
 
-main {
+body {
   background-color: $background;
-  color: $primary;
-}
-
-.row {
-  padding: 0; // Bootstrap override
-  margin: 0; // Bootstrap override
 }

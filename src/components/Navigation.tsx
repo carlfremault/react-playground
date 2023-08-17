@@ -15,26 +15,24 @@ function Navigation() {
   const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (
-    <div>
-      <Navbar color="faded" light>
-        <NavbarBrand href="/" className="me-auto">
-          reactstrap
-        </NavbarBrand>
-        <NavbarToggler onClick={toggleNavbar} className="me-2" />
-        <Collapse isOpen={!collapsed} navbar>
-          <Nav navbar>
-            <NavItem>
-              <NavLink href="/components/">Components</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                GitHub
-              </NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </div>
+    <Navbar color="faded" light className="mx-auto">
+      <NavbarBrand href="/" className="me-auto">
+        reactstrap
+      </NavbarBrand>
+      <NavbarToggler onClick={toggleNavbar} className="me-2" />
+      <Collapse isOpen={!collapsed} navbar>
+        <Nav navbar>
+          <NavItem>
+            <NavLink href="/components/">Components</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="https://github.com/reactstrap/reactstrap">
+              GitHub
+            </NavLink>
+          </NavItem>
+        </Nav>
+      </Collapse>
+    </Navbar>
   );
 }
 
