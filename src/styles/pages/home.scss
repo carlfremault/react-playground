@@ -15,16 +15,48 @@
 .image {
   object-fit: cover;
   width: 100%;
+  height: 100%;
   position: relative;
 }
 
-.wide-image {
-  max-height: 350px;
+section {
+  border: 3px solid salmon;
+}
+
+// Header
+
+#header-text {
+  color: white;
+  max-width: 850px;
+
   @include media-breakpoint-up(lg) {
-    max-height: 400px;
+    position: absolute;
+    z-index: 10;
+    margin-top: 15%;
   }
   @include media-breakpoint-up(xl) {
-    max-height: 450px;
+    margin-top: 20%;
+  }
+  @media (min-width: 1920px) {
+    margin-top: 20vh;
+  }
+}
+
+#header-image {
+  transform: scaleX(-1);
+}
+
+// Buttons
+
+.button-container {
+  max-width: 756px;
+
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 
@@ -39,40 +71,16 @@
   }
 }
 
-.button-container {
-  max-width: 756px;
-
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-
-  @include media-breakpoint-up(lg) {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+@include media-breakpoint-up(lg) {
+  .text-wrapper {
+    height: 650px;
+    position: relative;
   }
-}
 
-.text-container {
-  position: sticky;
-  bottom: 10px;
-
-  @include media-breakpoint-up(lg) {
+  .text-container {
+    bottom: 10px;
     max-width: 65%;
-  }
-}
-
-.high-container {
-  height: 350px;
-  @include media-breakpoint-up(sm) {
-    height: 450px;
-  }
-  @include media-breakpoint-up(md) {
-    height: 550px;
-  }
-  @include media-breakpoint-up(lg) {
-    height: 600px;
-  }
-  @include media-breakpoint-up(xl) {
-    height: 800px;
+    position: sticky;
   }
 }
 
@@ -88,38 +96,14 @@ li {
   max-width: 1920px;
 }
 
-// HEADER
-
-header {
-  @include media-breakpoint-up(lg) {
-  }
-}
-
-#header-text {
-  color: white;
-  @include media-breakpoint-up(lg) {
-    position: absolute;
-    z-index: 10;
-    margin-top: 15%;
-  }
-  @include media-breakpoint-up(xl) {
-    margin-top: 20%;
-  }
-}
-
-#header-image {
-  transform: scaleX(-1);
-}
-
 // PARALLAX CLASSES
 
 @include media-breakpoint-up(lg) {
   .parallax_wrapper {
-    perspective: 10px;
     height: 100vh;
-    overflow-y: auto;
     overflow-x: hidden;
-    transform-style: preserve-3d;
+    overflow-y: auto;
+    perspective: 10px;
   }
 
   .preserve3d {
@@ -128,68 +112,38 @@ header {
 
   .parallax__group {
     position: relative;
-    height: 650px;
     transform-style: preserve-3d;
+
     &.wide {
       height: 450px;
     }
   }
 
-  .parallax__layer {
-    position: absolute;
-  }
-
   .parallax__layer--section-1 {
-    position: relative;
-    top: 420px;
+    position: absolute;
+    top: 0px;
     right: 0px;
-    bottom: 0;
-    left: 0px;
-    transform: translateZ(-5px) scale(3.6);
-    z-index: -10;
-
-    @include media-breakpoint-up(xl) {
-      top: 280px;
-      transform: translateZ(-5px) scale(3.2);
-    }
-
-    @include media-breakpoint-up(xxl) {
-      top: 150px;
-      transform: translateZ(-5px) scale(2.8);
-    }
-
-    @media (min-width: 1600px) {
-      top: 100px;
-      transform: translateZ(-5px) scale(2.6);
-    }
-
-    @media (min-width: 1800px) {
-      top: 0px;
-      transform: translateZ(-5px) scale(2.4);
-    }
-
-    @media (min-width: 1920px) {
-      top: -150px;
-      transform: translateZ(-5px) scale(2);
-    }
+    bottom: 0px;
+    left: -35px;
+    transform: translateZ(-3px) scale(1.5);
   }
 
   .parallax__layer--section-2 {
-    position: relative;
+    position: absolute;
     top: -230px;
     right: 0px;
     bottom: 0px;
     left: 0px;
-    transform: translateZ(-5px) scale(2);
+    transform: translateZ(-3px) scale(1.5);
     z-index: -8;
+  }
 
-    @include media-breakpoint-up(xxl) {
-      top: -200px;
-    }
-
-    @media (min-width: 1800px) {
-      // top: -150px;
-      transform: translateZ(-5px) scale(2);
-    }
+  .parallax__layer--section-3 {
+    position: absolute;
+    top: 0px;
+    right: -40px;
+    bottom: 0px;
+    left: auto;
+    transform: translateZ(-3px) scale(1.5);
   }
 }

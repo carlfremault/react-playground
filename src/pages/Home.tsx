@@ -19,33 +19,37 @@ const Home = () => {
     <main className="parallax_wrapper">
       <Navigation />
       {/* Header */}
-      <header className="bg-cover px-auto">
-        <Row className="width-1920 mx-auto px-3 pt-3 px-sm-5 pt-sm-5">
-          <Col id="header-text" lg="5" className="mb-3 p-0">
-            <div>
-              <h1 className="mt-3 mt-lg-0 mb-4">Lorem ipsum dolor sit amet.</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus eius totam fuga provident doloremque rerum sit
-                inventore odio ab voluptatem. Aut totam saepe dolorum
-                repudiandae. Aperiam quae maiores iure eveniet?
-              </p>
-              <Button color="primary" className="mb-3">
-                Learn More
-              </Button>
-            </div>
-          </Col>
-          <Col lg={{ offset: 3, size: 9 }} className="p-0">
-            <img
-              id="header-image"
-              className="img-fluid image"
-              src="/images/neom-I5j46lqAo-o-unsplash1920x1281.jpg"
-            />
-          </Col>
-        </Row>
+      <header className="bg-cover">
+        <Container fluid="lg">
+          <Row>
+            <Col id="header-text" lg="5" className="mb-3 p-3 p-lg-0">
+              <div>
+                <h1 className="mt-3 mt-lg-0 mb-4">
+                  Lorem ipsum dolor sit amet.
+                </h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusamus eius totam fuga provident doloremque rerum sit
+                  inventore odio ab voluptatem. Aut totam saepe dolorum
+                  repudiandae. Aperiam quae maiores iure eveniet?
+                </p>
+                <Button color="primary" className="mb-3">
+                  Learn More
+                </Button>
+              </div>
+            </Col>
+            <Col lg={{ offset: 3, size: 9 }} className="p-3 p-lg-0">
+              <img
+                id="header-image"
+                className="img-fluid image"
+                src="/images/neom-I5j46lqAo-o-unsplash1920x1281.jpg"
+              />
+            </Col>
+          </Row>
+        </Container>
       </header>
       {/* Buttons */}
-      <div className="bg-cover mx-auto">
+      <div className="bg-cover">
         <section className="button-container mx-auto">
           <Row className="mx-3 mx-sm-5">
             <Col xs="6" md="3" className="p-1">
@@ -72,39 +76,38 @@ const Home = () => {
         </section>
       </div>
       {/* First section: wide parallax: image - text */}
-      <Container fluid className="preserve3d width-1920 p-0">
-        <section className="preserve3d">
-          <Row className="parallax__group">
-            <Col
-              lg="6"
-              className="parallex__layer parallax__layer--section-1 p-0"
-            >
-              <img
-                src="/images/neom-4K_x--J2Jbc-unsplash.jpg"
-                className="image"
-              />
-            </Col>
-            <Col
-              lg="6"
-              className="bg-accent d-flex flex-column justify-content-center align-items-center p-3 p-sm-5 px-lg-0 ms-auto"
-            >
-              <div className="text-container">
-                <h2 className="mb-4">First Section Here</h2>
-                <p className="">{lorem_40}</p>
-                <p>{lorem_20}</p>
-              </div>
-            </Col>
-          </Row>
-        </section>
+      <Container
+        fluid
+        className="preserve3d width-1320"
+        style={{ border: '3px solid purple' }}
+      >
+        <Row className="parallax__group">
+          <Col lg="6" className="parallax__layer--section-1 px-0">
+            <img
+              src="/images/neom-4K_x--J2Jbc-unsplash.jpg"
+              className="image"
+            />
+          </Col>
+          <Col
+            lg="6"
+            className="text-wrapper bg-accent d-flex flex-column justify-content-center align-items-center ms-auto p-3 p-sm-5"
+          >
+            <div className="text-container">
+              <h2 className="mb-4">First Section Here</h2>
+              <p>{lorem_40}</p>
+              <p>{lorem_20}</p>
+            </div>
+          </Col>
+        </Row>
       </Container>
       {/* Second section: title - text */}
-      <Container fluid className="p-0">
-        <section className="section-container bg-cover">
-          <Row className="width-1320 mx-auto p-3 p-sm-5">
-            <Col lg="6" className="p-0">
+      <section className="section-container bg-cover text-white">
+        <Container fluid="lg">
+          <Row>
+            <Col lg="6" className="pt-3 px-3 pt-sm-5 px-sm-5 pt-lg-0 px-lg-0">
               <h2 className="mb-4">Second Section With Some Explanation</h2>
             </Col>
-            <Col lg="6" className="p-0">
+            <Col lg="6" className="pb-3 px-3 pb-sm-5 px-sm-5 px-lg-0">
               <p>{lorem_15}</p>
               <p>{lorem_10}</p>
               <ul>
@@ -115,27 +118,27 @@ const Home = () => {
               <p>{lorem_15}</p>
             </Col>
           </Row>
-        </section>
-      </Container>
+        </Container>
+      </section>
       {/* Wide image parallax*/}
       <Container fluid className="width-1920 preserve3d p-0">
         <section className="parallax__group wide">
-          <div className="parallax__layer parallax__layer--section-2">
+          <div className="parallax__layer--section-2">
             <img
               src="/images/neom-9E9NsEiUGxg-unsplash 1920x1280.jpg"
-              className="wide-image image"
+              className="image"
             />
           </div>
         </section>
       </Container>
       {/* Third section: title - text */}
-      <Container fluid className="p-0">
-        <section className="section-container bg-cover">
-          <Row className="width-1320 mx-auto p-3 p-sm-5">
-            <Col lg="6" className="p-0">
+      <section className="section-container bg-cover text-white">
+        <Container fluid="lg">
+          <Row>
+            <Col lg="6" className="pt-3 px-3 pt-sm-5 px-sm-5 pt-lg-0 px-lg-0">
               <h2 className="mb-4">Third Section, more stuff</h2>
             </Col>
-            <Col lg="6" className="p-0">
+            <Col lg="6" className="pb-3 px-3 pb-sm-5 px-sm-5 px-lg-0">
               <ul>
                 <li>{lorem_35}</li>
                 <li>{lorem_25}</li>
@@ -143,45 +146,50 @@ const Home = () => {
               </ul>
             </Col>
           </Row>
-        </section>
-      </Container>
+        </Container>
+      </section>
       {/* Fourth section: wide parallax: text - image */}
-      <Container fluid className="width-1920 preserve3d p-0">
-        <section className=" preserve3d">
-          <Row className="parallax__group">
-            <Col
-              lg={{ size: 6, order: 2 }}
-              className="vertical-image parallax__layer parallax__layer--section-3 p-0"
-            >
-              <img src="/images/neom-dulVtESluoM-unsplash 1920x2879.jpg" />
-            </Col>
-            <Col
-              lg={{ size: 6, order: 1 }}
-              className="d-flex flex-column justify-content-center align-items-center p-3 p-sm-5 px-lg-0 bg-accent high-container"
-            >
-              <div className="text-container">
-                <h2 className="mb-4">One more section ...</h2>
-                <p className="">{lorem_30}</p>
-                <p>{lorem_20}</p>
-              </div>
-            </Col>
-          </Row>
-        </section>
+      <Container
+        fluid
+        className="preserve3d width-1320"
+        style={{ border: '3px solid purple' }}
+      >
+        <Row className="parallax__group">
+          <Col
+            lg={{ size: 6, order: 2 }}
+            className="parallax__layer--section-3 p-0"
+          >
+            <img
+              src="/images/neom-dulVtESluoM-unsplash 1920x2879.jpg"
+              className="image"
+            />
+          </Col>
+          <Col
+            lg={{ size: 6, order: 1 }}
+            className="text-wrapper bg-accent d-flex flex-column justify-content-center align-items-center p-3 p-sm-5"
+          >
+            <div className="text-container">
+              <h2 className="mb-4">One more section ...</h2>
+              <p className="">{lorem_30}</p>
+              <p>{lorem_20}</p>
+            </div>
+          </Col>
+        </Row>
       </Container>
       {/* Fifth section: title - text */}
-      <Container fluid className="p-0">
-        <section className="section-container bg-cover">
-          <Row className="width-1320 mx-auto p-3 p-sm-5">
-            <Col lg="6" className="p-0">
+      <section className="section-container bg-cover text-white">
+        <Container fluid="lg">
+          <Row>
+            <Col lg="6" className="pt-3 px-3 pt-sm-5 px-sm-5 pt-lg-0 px-lg-0">
               <h2 className="mb-4">Last section, conclusion</h2>
             </Col>
-            <Col lg="6" className="p-0">
+            <Col lg="6" className="pb-3 px-3 pb-sm-5 px-sm-5 px-lg-0">
               <p>{lorem_45}</p>
               <p>{lorem_50}</p>
             </Col>
           </Row>
-        </section>
-      </Container>
+        </Container>
+      </section>
       <Footer />
     </main>
   );

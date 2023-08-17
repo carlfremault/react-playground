@@ -7,6 +7,7 @@ import {
   Nav,
   NavItem,
   NavLink,
+  Container,
 } from 'reactstrap';
 
 function Navigation() {
@@ -15,24 +16,26 @@ function Navigation() {
   const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (
-    <Navbar color="faded" light className="mx-auto">
-      <NavbarBrand href="/" className="me-auto">
-        reactstrap
-      </NavbarBrand>
-      <NavbarToggler onClick={toggleNavbar} className="me-2" />
-      <Collapse isOpen={!collapsed} navbar>
-        <Nav navbar>
-          <NavItem>
-            <NavLink href="/components/">Components</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="https://github.com/reactstrap/reactstrap">
-              GitHub
-            </NavLink>
-          </NavItem>
-        </Nav>
-      </Collapse>
-    </Navbar>
+    <Container fluid="lg" className="px-0">
+      <Navbar color="faded" light className="mx-auto">
+        <NavbarBrand href="/" className="me-auto">
+          reactstrap
+        </NavbarBrand>
+        <NavbarToggler onClick={toggleNavbar} className="me-2" />
+        <Collapse isOpen={!collapsed} navbar>
+          <Nav navbar>
+            <NavItem>
+              <NavLink href="/components/">Components</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="https://github.com/reactstrap/reactstrap">
+                GitHub
+              </NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
+    </Container>
   );
 }
 
