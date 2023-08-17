@@ -76,11 +76,7 @@ const Home = () => {
         </section>
       </div>
       {/* First section: wide parallax: image - text */}
-      <Container
-        fluid
-        className="preserve3d width-1320"
-        style={{ border: '3px solid purple' }}
-      >
+      <Container fluid className="preserve3d width-1320">
         <Row className="parallax__group">
           <Col lg="6" className="parallax__layer--section-1 px-0">
             <img
@@ -90,7 +86,7 @@ const Home = () => {
           </Col>
           <Col
             lg="6"
-            className="text-wrapper bg-accent d-flex flex-column justify-content-center align-items-center ms-auto p-3 p-sm-5"
+            className="text-wrapper-1 bg-accent d-flex flex-column justify-content-center align-items-center ms-auto p-3 p-sm-5"
           >
             <div className="text-container">
               <h2 className="mb-4">First Section Here</h2>
@@ -105,7 +101,9 @@ const Home = () => {
         <Container fluid="lg">
           <Row>
             <Col lg="6" className="pt-3 px-3 pt-sm-5 px-sm-5 pt-lg-0 px-lg-0">
-              <h2 className="mb-4">Second Section With Some Explanation</h2>
+              <h2 className="mb-4 text-center">
+                Second Section With Some Explanation
+              </h2>
             </Col>
             <Col lg="6" className="pb-3 px-3 pb-sm-5 px-sm-5 px-lg-0">
               <p>{lorem_15}</p>
@@ -136,7 +134,7 @@ const Home = () => {
         <Container fluid="lg">
           <Row>
             <Col lg="6" className="pt-3 px-3 pt-sm-5 px-sm-5 pt-lg-0 px-lg-0">
-              <h2 className="mb-4">Third Section, more stuff</h2>
+              <h2 className="mb-4 text-center">Third Section, more stuff</h2>
             </Col>
             <Col lg="6" className="pb-3 px-3 pb-sm-5 px-sm-5 px-lg-0">
               <ul>
@@ -149,11 +147,7 @@ const Home = () => {
         </Container>
       </section>
       {/* Fourth section: wide parallax: text - image */}
-      <Container
-        fluid
-        className="preserve3d width-1320"
-        style={{ border: '3px solid purple' }}
-      >
+      <Container fluid className="preserve3d width-1320">
         <Row className="parallax__group">
           <Col
             lg={{ size: 6, order: 2 }}
@@ -166,11 +160,13 @@ const Home = () => {
           </Col>
           <Col
             lg={{ size: 6, order: 1 }}
-            className="text-wrapper bg-accent d-flex flex-column justify-content-center align-items-center p-3 p-sm-5"
+            className="text-wrapper-2 bg-accent d-flex flex-column justify-content-center align-items-center p-3 p-sm-5"
           >
             <div className="text-container">
               <h2 className="mb-4">One more section ...</h2>
-              <p className="">{lorem_30}</p>
+              <p>{lorem_30}</p>
+              <p>{lorem_10}</p>
+              <p>{lorem_40}</p>
               <p>{lorem_20}</p>
             </div>
           </Col>
@@ -181,7 +177,7 @@ const Home = () => {
         <Container fluid="lg">
           <Row>
             <Col lg="6" className="pt-3 px-3 pt-sm-5 px-sm-5 pt-lg-0 px-lg-0">
-              <h2 className="mb-4">Last section, conclusion</h2>
+              <h2 className="mb-4 text-center">Last section, conclusion</h2>
             </Col>
             <Col lg="6" className="pb-3 px-3 pb-sm-5 px-sm-5 px-lg-0">
               <p>{lorem_45}</p>

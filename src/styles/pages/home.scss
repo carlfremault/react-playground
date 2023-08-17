@@ -19,8 +19,12 @@
   position: relative;
 }
 
-section {
-  border: 3px solid salmon;
+.width-1320 {
+  max-width: 1320px;
+}
+
+.width-1920 {
+  max-width: 1920px;
 }
 
 // Header
@@ -60,6 +64,8 @@ section {
   }
 }
 
+// Containers
+
 .section-container {
   @include media-breakpoint-up(lg) {
     padding-top: 5rem;
@@ -72,8 +78,12 @@ section {
 }
 
 @include media-breakpoint-up(lg) {
-  .text-wrapper {
+  .text-wrapper-1 {
     height: 650px;
+    position: relative;
+  }
+  .text-wrapper-2 {
+    height: 850px;
     position: relative;
   }
 
@@ -84,16 +94,10 @@ section {
   }
 }
 
+// Other elements
+
 li {
   list-style: disc;
-}
-
-.width-1320 {
-  max-width: 1320px;
-}
-
-.width-1920 {
-  max-width: 1920px;
 }
 
 // PARALLAX CLASSES
@@ -115,7 +119,7 @@ li {
     transform-style: preserve-3d;
 
     &.wide {
-      height: 450px;
+      height: 500px;
     }
   }
 
@@ -130,12 +134,11 @@ li {
 
   .parallax__layer--section-2 {
     position: absolute;
-    top: -230px;
+    top: -50px;
     right: 0px;
     bottom: 0px;
     left: 0px;
     transform: translateZ(-3px) scale(1.5);
-    z-index: -8;
   }
 
   .parallax__layer--section-3 {
