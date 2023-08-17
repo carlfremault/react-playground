@@ -1,65 +1,70 @@
+// UTILITY CLASSES
+
+.bg-accent {
+  background-color: $accent;
+  color: $text;
+}
+
+.bg-cover {
+  background-color: $background;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.width-1320 {
+  max-width: 1320px;
+}
+
+.width-1920 {
+  max-width: 1920px;
+}
+
+// Header
+
 #header-text {
+  color: white;
+  max-width: 850px;
+
   @include media-breakpoint-up(lg) {
-    margin-top: 10%;
     position: absolute;
-    z-index: 1;
+    z-index: 10;
+    margin-top: 15%;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-top: 20%;
+  }
+  @media (min-width: 1920px) {
+    margin-top: 20vh;
   }
 }
+
 #header-image {
   transform: scaleX(-1);
 }
 
-.wide-section {
-  background-color: $secondary;
-  color: $text;
-}
-
-img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.wide-image {
-  max-height: 350px;
-  @include media-breakpoint-up(lg) {
-    max-height: 400px;
-  }
-  @include media-breakpoint-up(xl) {
-    max-height: 450px;
-  }
-}
-
-.vertical-image {
-  max-height: 350px;
-  @include media-breakpoint-up(sm) {
-    max-height: 450px;
-  }
-  @include media-breakpoint-up(md) {
-    max-height: 550px;
-  }
-  @include media-breakpoint-up(lg) {
-    max-height: 600px;
-  }
-  @include media-breakpoint-up(xl) {
-    max-height: 800px;
-  }
-}
+// Buttons
 
 .button-container {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  max-width: 756px;
+
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
   @include media-breakpoint-up(lg) {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 
-.text-container {
-  @include media-breakpoint-up(lg) {
-    max-width: 65%;
-  }
-}
+// Containers
 
 .section-container {
   @include media-breakpoint-up(lg) {
@@ -72,6 +77,76 @@ img {
   }
 }
 
+@include media-breakpoint-up(lg) {
+  .text-wrapper-1 {
+    height: 650px;
+    position: relative;
+  }
+  .text-wrapper-2 {
+    height: 850px;
+    position: relative;
+  }
+
+  .text-container {
+    bottom: 10px;
+    max-width: 65%;
+    position: sticky;
+  }
+}
+
+// Other elements
+
 li {
   list-style: disc;
+}
+
+// PARALLAX CLASSES
+
+@include media-breakpoint-up(lg) {
+  .parallax_wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+  }
+
+  .preserve3d {
+    transform-style: preserve-3d;
+  }
+
+  .parallax__group {
+    position: relative;
+    transform-style: preserve-3d;
+
+    &.wide {
+      height: 500px;
+    }
+  }
+
+  .parallax__layer--section-1 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: -35px;
+    transform: translateZ(-3px) scale(1.5);
+  }
+
+  .parallax__layer--section-2 {
+    position: absolute;
+    top: -50px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    transform: translateZ(-3px) scale(1.5);
+  }
+
+  .parallax__layer--section-3 {
+    position: absolute;
+    top: 0px;
+    right: -40px;
+    bottom: 0px;
+    left: auto;
+    transform: translateZ(-3px) scale(1.5);
+  }
 }
