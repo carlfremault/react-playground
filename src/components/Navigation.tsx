@@ -17,18 +17,16 @@ function Navigation() {
   return (
     <Navbar color="faded" light className="mx-auto">
       <NavbarBrand href="/" className="me-auto">
-        reactstrap
+        Parallax Landing Page
       </NavbarBrand>
       <NavbarToggler onClick={toggleNavbar} className="me-2" />
       <Collapse isOpen={!collapsed} navbar>
         <Nav navbar>
           <NavItem>
-            <NavLink href="/components/">Components</NavLink>
+            <NavLink href="#">Menu Item 1</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="https://github.com/reactstrap/reactstrap">
-              GitHub
-            </NavLink>
+            <NavLink href="#">Menu Item 2</NavLink>
           </NavItem>
         </Nav>
       </Collapse>
